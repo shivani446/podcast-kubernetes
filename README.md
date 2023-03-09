@@ -16,26 +16,27 @@ Your very own Podcast web app built with Laravel 5. This web app enables you to 
 To install Podcastwala you can clone the repository:
 
 ```
-$ git clone https://github.com/modestkdr/Podcastwala.git.
+$ git clone git@github.com:shivani446/podcast-kubernetes.git
 ```
 
-next build the container using 
+then to run command
 
 ```
-$ docker compose up --build 
+kubectl apply -f k8s
 ```
-now go into the container using command
+and then go to file named hoats 
 
 ```
-$ docker exec -it <cotainer_id> bash
+sudo vim /etc/hosts
 ```
+now edit it by adding 
+```
+10.0.17.106 shivani.local
+```
+now open browser and search 
+```
+shivani.local/
+```
+FINALLY you can see the PODCAST app
 
-run the migrations:
-
-```
-$ php artisan migrate
-```
- BOOM!!!!! its ready in your localhost...
-### License
-Podcastwala is licensed under the MIT license. If you find something wrong with the code or think it could be improved, I welcome you to create an <a href="https://github.com/modestkdr/Podcastwala/issues">issue</a> or submit a pull request!
 
